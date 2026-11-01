@@ -1,3 +1,5 @@
+// @ts-check
+
 const books = {
   'Деревня ведьм': [
     [5, 7, 4, 5, 5, 8, 8],
@@ -51,7 +53,7 @@ const books = {
 
 
 const calc = (label = '', skipVoters = []) => {
-  const result = [];
+  const result = /** @type {[string, number][]} */ ([]);
   for (const [name, arr] of Object.entries(books)) {
     const grades = [];
     for (const a of arr) {
